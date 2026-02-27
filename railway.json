@@ -1,0 +1,11 @@
+{
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "./gradlew build"
+  },
+  "deploy": {
+    "startCommand": "java -jar build/libs/*.jar",
+    "healthcheckPath": "/actuator/health",
+    "restartPolicyType": "ON_FAILURE"
+  }
+}
